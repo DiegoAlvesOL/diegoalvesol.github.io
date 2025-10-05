@@ -1,7 +1,7 @@
 # 🌌 Diego Skywalker | Frontend Explorer
 diegoalvesol.github.io
 
-Welcome to my first website — a small corner of the web where I'm learning, building, and having fun while exploring the galaxy of **Frontend Development**.
+Welcome to my first website a small corner of the web where I'm learning, building, and having fun while exploring the galaxy of **Frontend Development**.
 
 > “May the code be clean, and the Force be with you.” ✨
 
