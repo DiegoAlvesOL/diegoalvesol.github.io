@@ -1,0 +1,75 @@
+/*
+    CSS GLOBAL
+    - Este arquivo define o estilo visual de todas as páginas do site
+    - Você pode aplicá-lo a qualquer novo arquivo HTML com a mesma linha:
+      <link rel="stylesheet" href="assets/css/global.css">
+*/
+
+/* ======== CONFIGURAÇÕES BÁSICAS ======== */
+body {
+    /* Fonte padrão e espaçamento geral */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Fundo escuro (tema Star Wars) e texto claro */
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    text-align: center;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+    /* Fundo do cabeçalho e espaçamento interno */
+    background-color: #1f2833;
+    padding: 2rem 0;
+}
+
+/* Título principal (nome) */
+h1 {
+    color: #66fcf1; /* Azul neon */
+    margin-bottom: 0.5rem;
+}
+
+/* Subtítulo (frase “May the Force be with you”) */
+h2 {
+    color: #45a29e;
+    font-weight: normal;
+}
+
+/* ======== LINKS ======== */
+a {
+    color: #66fcf1;
+    text-decoration: none;
+    transition: 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito hover (passar o mouse sobre o link) */
+a:hover {
+    text-decoration: underline;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #1f2833;
+    color: #c5c6c7;
+    font-size: 0.9rem;
+}
+
+/* ======== ELEMENTOS DE TEXTO ======== */
+p {
+    line-height: 1.6; /* Melhora a leitura */
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+ul {
+    list-style-type: none; /* Remove bolinhas da lista */
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}

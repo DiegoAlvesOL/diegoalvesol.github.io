@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+        META INFORMAÇÕES DA PÁGINA
+        - Define o charset e a forma como o site se adapta a diferentes telas (viewport)
+        - O título aparece na aba do navegador
+        - A meta description ajuda no SEO (descrição que aparece nos resultados de busca)
+        - O link conecta este arquivo ao CSS global
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Tale of two Cities</title>
-    <meta name="description" content="Hi I'm Diego Skywalker I hope you like this webpage">
-
+    <title>Diego Skywalker | Frontend Explorer</title>
+    <meta name="description" content="Hi, I'm Diego Skywalker — a frontend student exploring the galaxy of HTML, CSS and JavaScript.">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
 
 <body>
-<h1> Diego Skywalker - may the force be with you</h1>
-<h2>Small Heading</h2>
-<p> </p>
+<!--
+    CABEÇALHO (HEADER)
+    - Contém o título principal (h1) e um subtítulo (h2)
+    - Este bloco pode ser replicado em todas as páginas do site para manter identidade visual
+-->
+<header>
+    <h1>Diego Skywalker</h1>
+    <h2>May the Force be with you</h2>
+</header>
 
-<h3> </h3>
-<p></p>
+<!--
+    CONTEÚDO PRINCIPAL (MAIN)
+    - Contém seções com texto sobre você e links para outras páginas
+    - Cada seção (section) tem seu próprio header e conteúdo
+-->
+<main>
+    <!-- SEÇÃO SOBRE VOCÊ -->
+    <section>
+        <header>
+            <h3>About Me</h3>
+        </header>
+        <p>
+            Hello there! I'm <strong>Diego Alves de Oliveira</strong>, but you can call me <em>Diego Skywalker</em> — a playful nod to my journey as a learner exploring the universe of technology.
+            I'm currently studying <strong>Frontend Development</strong> and building my foundation in <strong>HTML</strong>, <strong>CSS</strong>, and soon <strong>JavaScript</strong>.
+        </p>
+        <p>
+            I created this website as a small digital hangar to practice web design, showcase some exercises, and share my learning path through the Force of code.
+        </p>
+    </section>
 
-<p><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
-<p><a href="exercises/page-2.html">Song of prince</a></p>
+    <!-- SEÇÃO DE LINKS PARA OUTRAS PÁGINAS -->
+    <section>
+        <header>
+            <h3>My Practice Pages</h3>
+        </header>
+        <ul>
+            <!--
+                Lista de páginas de exemplo/exercícios.
+                Pode adicionar novas linhas aqui conforme criar novas páginas.
+                Exemplo:
+                <li><a href="exercises/page-4.html">New Exercise</a></li>
+            -->
+            <li><a href="exercises/page-1.html">A Tale of Two Cities</a></li>
+            <li><a href="exercises/page-2.html">Song of Prince</a></li>
+            <li><a href="exercises/page-3.html">Page with More Indentation</a></li>
+        </ul>
+    </section>
+</main>
 
-
+<!--
+    RODAPÉ (FOOTER)
+    - Ideal para informações de direitos autorais e créditos
+    - Também pode ser replicado em todas as páginas para manter consistência
+-->
+<footer>
+    <p>© 2025 Diego Skywalker. All rights reserved. | Built with HTML & CSS</p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,20 @@
+# IDEs da JetBrains
+.idea/
+*.iml
+
+# Sistema operacional macOS
+.DS_Store
+
+# Node.js (caso use no futuro)
+node_modules/
+
+# Logs
+*.log
+
+# Arquivos de build (caso venha a usar algum build tool)
+dist/
+build/
+
+# Arquivos temporários
+*.tmp
+*.swp
