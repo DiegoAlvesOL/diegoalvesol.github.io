@@ -332,4 +332,29 @@ img { margin-bottom: 24px;
     box-shadow: 8px 10px 8px #888;
 }
 
+/* ======== HYPERLINKS ======== */
+a:link, a:visited {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--yellow-700)
+}
+
+a:link, a:visited {
+    color: #000;
+    transition: all 0.3s ease;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #000;
+    text-underline-offset: 7px;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--yellow-700);
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--blue-600);
+    text-underline-offset: 7px;
+}
+
 
