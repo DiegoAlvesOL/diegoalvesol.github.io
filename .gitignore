@@ -1,20 +1,23 @@
-# IDEs da JetBrains
-.idea/
-*.iml
-
-# Sistema operacional macOS
+# Sistema
 .DS_Store
+Thumbs.db
 
-# Node.js (caso use no futuro)
+# IDE / Editor
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.idea/
+
+
+# Node / builds (se houver futuramente)
 node_modules/
-
-# Logs
-*.log
-
-# Arquivos de build (caso venha a usar algum build tool)
 dist/
 build/
 
 # Arquivos temporários
+*.log
 *.tmp
 *.swp
+
+# Dados privados
+*.env

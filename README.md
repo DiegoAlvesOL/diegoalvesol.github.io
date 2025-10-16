@@ -1,5 +1,6 @@
-# 🌌 Diego Skywalker | Frontend Explorer
-diegoalvesol.github.io
+# 🌌 **Diego Skywalker | Frontend Explorer**
+
+**Live Demo:** [diegoalvesol.github.io](https://diegoalvesol.github.io)
 
 Welcome to my first website a small corner of the web where I'm learning, building, and having fun while exploring the galaxy of **Frontend Development**.
 
@@ -7,36 +8,62 @@ Welcome to my first website a small corner of the web where I'm learning, buildi
 
 ---
 
-## 🧠 About the Project
+## **About the Project**
 
-This project was created as part of my **Frontend learning journey**.  
-It’s a space to experiment with **HTML** and **CSS**, and soon **JavaScript**, while learning how to structure and style modern web pages.
+This project was created as part of my **academic journey in Frontend Development**.  
+It’s a personal space to practice **HTML**, **CSS**, and soon **JavaScript**, while learning how to structure, style, and share modern web pages.
 
-The theme “Diego Skywalker” is a fun nickname to represent my adventure as a Padawan in the world of code.  
-Each page here is a new mission in my training to become a *Frontend Jedi* 🧑‍💻🪐
+The nickname **"Diego Skywalker"** represents my journey as a *Padawan Developer* discovering new skills, overcoming bugs, and enjoying the path toward becoming a **Frontend Jedi** 🧑‍💻🪐
+
+Each page in this project is like a new mission in the *Academy of Code*.
 
 ---
 
 ## 🗂️ Project Structure
 ```
 website/
-├── index.html # Homepage (About Me + Links to Exercises)
-├── exercises/ # Folder containing example pages
-│ ├── page-1.html
-│ ├── page-2.html
-│ └── page-3.html
-└── assets/
-└── css/
-└── global.css # Global styles for all pages
+│
+├─ assets/
+│   ├─ css/
+│   │   ├─ global.css           
+│   │   └─ holocron.css         
+│   ├─ img/
+│   │   ├─ logo.png
+│   │   ├─ backgrounds/
+│   │   └─ icons/
+│   └─ gifs/
+│
+├─ exercises/
+│   ├─ assets/
+│   │   ├─ css/
+│   │   ├─ img/
+│   │   └─ videos/
+│   ├─ page-1.html
+│   ├─ ...
+│
+├─ studies/                              
+│   ├─ assets/
+│   │   ├─ css/
+│   │   ├─ img/
+│   │   └─ gifs/
+│   ├─ git-commands.html                 
+│   ├─ linux-basics.html
+│   ├─ html-css.html
+│   ├─ js-notes.html
+│   └─ index.html                        
+│
+├─ index.html
+└─ README.md
+
 ```
 ---
 
-## 💡 What I Learned So Far
+## 💡 **What I’ve Learned So Far**
 
-- How to structure a webpage with semantic HTML
-- How to apply global styles with CSS
-- How to organize files in a clean project structure
-- How to use Git and GitHub to version and share projects
+- How to structure a webpage using **semantic HTML5**
+- How to apply **global and consistent styles** with CSS
+- How to **organize project files** clearly for scalability
+- How to **use Git & GitHub** for versioning and collaboration
 
 ---
 
@@ -49,13 +76,45 @@ website/
 
 ---
 
-## 🧑‍🎓 Author
+## 🧩 **Academic Context**
+
+This website also serves as a repository for my college learning journey.  
+In the upcoming updates, I’ll include a **Private Studies section** where I’ll share personal Markdown notes (like Git, Linux, and command cheatsheets).  
+Some pages will display animations, interactive elements, or educational GIFs to reinforce what I’m learning in class. 📚
+
+---
+
+## 🚀 **Next Steps**
+
+| Goal | Description | Status |
+|------|--------------|--------|
+| 🧱 **Aula 1–3** | Base structure + CSS connection | ✅ Done |
+| 🪐 **Aula 4** | Create the “Private Studies” section | 🧩 Next |
+| 🎨 **Aula 5** | Add responsive design and animations | ⏳ Coming soon |
+| ⚡ **Aula 6** | Introduce JavaScript for interactivity | 🚧 Planned |
+| 💾 **Aula 7** | Integrate Markdown viewer or dynamic content | 💭 Idea stage |
+
+---
+
+## 🧰 **Tech Stack**
+
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Structure and semantics |
+| **CSS3** | Style and layout |
+| **Markdown (.md)** | Study notes and personal documentation |
+| **Git & GitHub** | Version control and portfolio hosting |
+
+---
+
+## 🧑‍🎓 **Author**
 
 **Diego Alves de Oliveira**  
 Frontend Student | Future Software Developer  
 📍 Based in Ireland  
-💬 Connect with me on [GitHub](https://github.com/diegoalvesol) and [LinkedIn](https://www.linkedin.com/in/diego-alves-de-oliveira-1396a921a/)
+💬 Connect with me:  
+[GitHub](https://github.com/diegoalvesol) • [LinkedIn](https://www.linkedin.com/in/diego-alves-de-oliveira-1396a921a/)
 
 ---
 
-> “Remember… the Force will be with you, always.”
+> “Remember… the Force will be with you, always.” 🪐
