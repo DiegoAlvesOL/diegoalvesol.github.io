@@ -88,11 +88,12 @@ Some pages will display animations, interactive elements, or educational GIFs to
 
 | Goal | Description | Status |
 |------|--------------|--------|
-| 🧱 **Aula 1–3** | Base structure + CSS connection | ✅ Done |
-| 🪐 **Aula 4** | Create the “Private Studies” section | 🧩 Next |
-| 🎨 **Aula 5** | Add responsive design and animations | ⏳ Coming soon |
-| ⚡ **Aula 6** | Introduce JavaScript for interactivity | 🚧 Planned |
-| 💾 **Aula 7** | Integrate Markdown viewer or dynamic content | 💭 Idea stage |
+| 🧱 **Aulas 1–3** | Base structure + CSS setup | ✅ Done |
+| 🪐 **Aula 4** | Create the “Holocron of Studies” section | ✅ Done |
+| 🎨 **Aula 5** | Add responsive design and entrance animations | ✅ Done |
+| 💡 **Aula 6** | Improve layout structure and visual polish | 🧩 Next |
+| 🌌 **Aula 7** | Add accessibility and usability refinements | 🚧 Planned |
+| 💾 **Aula 8** | Explore optional dynamic or Markdown-based content | 💭 Idea stage |
 
 ---
 
