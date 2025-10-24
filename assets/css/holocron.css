@@ -3,10 +3,21 @@
    Custom styles for the "Holocron of Studies" section
    ======================================= */
 
+/* =========================================
+   - Váriáveis de cores globais
+   ========================================= */
+:root{
+    --color-bg-dark: #0b0c10;    /* Fundo principal do site */
+    --color-panel: #1f2833;      /* Fundo dos cards e header */
+    --color-border: #45a29e;     /* Cor para bordas e detalhes */
+    --color-highlights: #66fcf1; /* Cor para destaque e (links, títulos) */
+    --color-text: #c5c6c7;       /* Cor para texto e conteúdo (<p> </p>) */
+}
+
 /*===========GENERAL LAYOUT================*/
 body{
-    background-color: #0b0c10;
-    color: #c5c6c7;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,15 +25,16 @@ body{
 
 /* ====== HEADER ====== */
 header{
-    background-color: #1f2833;
+    background-color: var(--color-panel);
     padding: 2rem 1rem;
     text-align: center;
-    border-bottom: 2px solid #45a29e;
+    border-bottom: 2px solid var(--color-border);
 }
 header h1{
-    color: #66fcf1;
+    color: var(--color-highlights);
     font-size: 2rem;
     margin-bottom: 0.3rem;
+    letter-spacing: 1px;
 }
 
 /*h2{*/
@@ -30,35 +42,36 @@ header h1{
 /*}*/
 
 header .subtitle{
-    color: #45a29e;
+    color: var(--color-border);
     font-style: italic;
 }
 
 /* return link */
 header .back-link{
-    color: #c5c6c7;
+    color: var(--color-text);
     text-decoration: none;
     display: inline-block;
     margin-top: 1rem;
-    border: 1px solid #45a29e;
+    border: 1px solid var(--color-border);
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 header .back-link:hover{
-    background-color: #45a29e;
-    color: #0b0c10;
+    background-color: var(--color-border);
+    color: var(--color-bg-dark);
 }
 
 /* ====== CARD GRID (wrappers container) ===== */
 .holocron-grid{
     display: grid;
+    box-shadow: 0 0 20px rgba(69,168,158,0.5);
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 
@@ -114,8 +127,8 @@ header .back-link:hover{
 
 /* ====== CARD ====== */
 .holocron-card{
-    background-color: #1f2833;
-    border: 1px solid #45a29e;
+    background-color: var(--color-panel);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: 1.5rem;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -128,7 +141,7 @@ header .back-link:hover{
 
 .holocron-card:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 15px #66fcf1;
+    box-shadow: 0 0 15px var(--color-highlights);
     z-index: 2;
 }
 
@@ -142,19 +155,19 @@ header .back-link:hover{
 
 .holocron-card h2{
     margin: 0.5rem 0;
-    color: #66fcf1;
+    color: var(--color-highlights);
 }
 
-.hoolocron-card p{
+.holocron-card p{
     margin-bottom: 1rem;
-    color: #c5c6c7ba
+    color: var(--color-text);
 }
 
 /* Button inside the card */
 .holocron-card .btn{
     display: inline-block;
-    background-color: #45a29e;
-    color: #0b0c10;
+    background-color: var(--color-border);
+    color: var(--color-bg-dark);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
@@ -163,18 +176,19 @@ header .back-link:hover{
 
 /* Hover over the button */
 .holocron-card .btn:hover{
-    background-color: #66fcf1;
-    color: #0b0c10;
+    background-color: var(--color-highlights);
+    color: var(--color-bg-dark);
 }
 
 /* ====== FOOTER ====== */
 footer{
-    background-color: #1f2833;
-    color: #c5c6c7;
+    background-color: var(--color-panel);
+    color: var(--color-text);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     margin-top:3rem;
+    border-top: 2px solid var(--color-border);
 }
 
 /* ===============================
@@ -182,7 +196,7 @@ footer{
    =============================== */
 
 *{
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body{
