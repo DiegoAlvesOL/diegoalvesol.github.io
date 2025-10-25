@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Git Command Guide | Holocron Studies</title>
+
+    <link rel="stylesheet" href="assets/css/git-guide.css">
+</head>
+<body>
+
+    <!-- Container principal que envolve todo o conteúdo -->
+    <div class="git-guide-container">
+
+        <!-- Cabeçalho da página -->
+        <header class="git-header">
+            <h1>Git Command Guide</h1>
+            <p class="git-subtitle">Learn and practice essential Git commands</p>
+        </header>
+
+        <!-- Botão para retornar à página principal -->
+        <a href="../index.html" class="back-button">← Back to Holocrons</a>
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <h1 class="logo">Git Commands</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Introdução</a></li>
+                    <li><a href="#environment">Configuração Inicial</a></li>
+                    <li><a href="#initi">Inicialização</a></li>
+                    <li><a href="#status">Status</a></li>
+                    <li><a href="#cloning">Clonar Repositório</a></li>
+
+                    <li>
+                        <a href="#branches">Branches</a>
+                        <ul class="submenu">
+                            <li><a href="#branch-create">Criar nova branch</a></li>
+                            <li><a href="#branch-list">Listar branches</a></li>
+                            <li><a href="#branch-switch">Mudar de branch</a></li>
+                            <li><a href="#branch-delete">Deletar branch</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#staging-area">Staging e Commit</a>
+                        <ul class="submenu">
+                            <li><a href="#add-files">Adicionar arquivos</a></li>
+                            <li><a href="#create-commit">Criar novo commit</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#remote-repo">Trabalhando com Repositório Remoto GitHub</a>
+                        <ul class="submenu">
+                            <li><a href="#check-remote">Verificar remotos</a></li>
+                            <li><a href="#push-files">Enviar alterações</a></li>
+                            <li><a href="#pull-files">Puxar alterações</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#merge">Merge entre branchs</a></li>
+                    <li><a href="#cleanup">Limpeza</a></li>
+
+                    <li>
+                        <a href="#extras">Extras</a>
+                        <ul class="submenu">
+                            <li><a href="#git-log">Commit log</a></li>
+                            <li><a href="#diff-files">Diferença entre arquivos</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#good-practices-branches">Boas Práticas: Branches</a></li>
+                    <li><a href="#good-practices-commits">Boas Práticas: Commits</a></li>
+                    <li><a href="#commands-for-merging">Comandos para Fazer Merge com a Main</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Seção de conteúdo principal -->
+        <main class="git-content">
+            <section id="intro">
+                <h2>Introdução</h2>
+                <p>Este guia contém os principais comandos Git utilizados no dia a dia de desenvolvimento, incluindo exemplos, explicações e boas práticas. Um índice clicável está disponível abaixo para facilitar a navegação.</p>
+            </section>
+
+            <section id="environment">
+                <h2>Configuração Inicial</h2>
+                <pre><code>git config --global user.name "Seu Nome"</code></pre>
+                <pre><code>git config --global user.email "seu@email.com"</code></pre>
+                <p>Define seu nome de usuário e e-mail para commits</p>
+            </section>
+
+            <section id="initi">
+                <h2>Inicialização</h2>
+                <pre><code>git init</code></pre>
+                <p>Cria um novo repositório Git no diretório atual.</p>
+            </section>
+
+            <section id="status">
+                <h2>Status</h2>
+                <pre><code>git status</code></pre>
+                <p>Verifica o status da branch e exibe os arquivos que sofreram alterações e que já foram colocados na staging area.</p>
+            </section>
+
+
+            <section id="cloning">
+                <h2>Clonar Repositório</h2>
+                <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+                <p>Faz uma cópia completa de um repositório remoto (como o do GitHub) no seu computador.</p>
+            </section>
+
+            <section id="branches">
+                <h2>Branches</h2>
+                <p>As branches permitem trabalhar em diferentes linhas de desenvolvimento dentro de um mesmo projeto Git.</p>
+
+                <section id="branch-create">
+                    <h3>Criar nova branch</h3>
+                    <pre><code>git checkout -b nome-da-branch</code></pre>
+                    <p>Cria e muda automaticamente para uma nova branch chamada <em>nome-da-branch</em>.</p>
+                </section>
+
+                <section id="branch-list">
+                    <h3>Listar branches</h3>
+                    <pre><code>git branch</code></pre>
+                    <p>Exibe todas as branches existentes no repositório. A branch atual é destacada com um asterisco (*).</p>
+                </section>
+
+                <section id="branch-switch">
+                    <h3>Mudar de branch</h3>
+                    <pre><code>git checkout nome-da-branch</code></pre>
+                    <p>Alterna para a branch especificada.</p>
+                </section>
+
+                <section id="branch-delete">
+                    <h3>Deletar branch</h3>
+                    <pre><code>git branch -d nome-da-branch</code></pre>
+                    <p>Remove a branch local após garantir que ela foi mesclada.</p>
+                </section>
+            </section>
+
+            <section id="staging-area">
+                <h2>Staging e Commit</h2>
+                <p>A área de staging é onde você prepara as alterações antes de criar um commit. O commit registra essas alterações de forma permanente no histórico do Git.</p>
+
+                <section id="add-files">
+                    <h3>Adicionar arquivos</h3>
+                    <pre><code>git add nome-do-arquivo</code></pre>
+                    <pre><code>git add . # todos os arquivos modificados</code></pre>
+                    <p>Adiciona arquivos específicos (ou todos) à área de staging para serem incluídos no próximo commit.</p>
+                </section>
+
+                <section id="create-commit">
+                    <h3>Criar novo commit</h3>
+                    <pre><code>git commit -m "mensagem do commit"</code></pre>
+                    <p>Cria um ponto de salvamento no histórico do projeto com uma mensagem descritiva sobre as alterações realizadas.</p>
+                </section>
+            </section>
+
+            <section id="remote-repo">
+                <h2>Trabalhando com Repositório Remoto GitHub</h2>
+                <p>Esses comandos permitem conectar seu repositório local com um servidor remoto (como o GitHub), enviar e receber alterações.</p>
+
+                <section id="check-remote">
+                    <h3>Verificar remotos</h3>
+                    <pre><code>git remote -v</code></pre>
+                    <p>Lista os repositórios remotos configurados e suas URLs.</p>
+                </section>
+
+                <section id="push-files">
+                    <h3>Enviar alterações</h3>
+                    <pre><code>git push origin nome-da-branch</code></pre>
+                    <p>Envia os commits da branch atual para o repositório remoto.</p>
+                </section>
+
+                <section id="pull-files">
+                    <h3>Puxar alterações</h3>
+                    <pre><code>git pull origin nome-da-branch</code></pre>
+                    <p>Baixa e aplica as alterações mais recentes do repositório remoto na sua branch local.</p>
+                </section>
+            </section>
+
+            <section id="merge">
+                <h2>Merge</h2>
+                <pre><code>git checkout main #se essa for a branch que deseja fazer o marge</code></pre>
+                <pre><code>git merge nome-da-branch</code></pre>
+                <p>Combina as alterações de uma branch específica com a branch atual (geralmente a main).</p>
+            </section>
+
+            <section id="cleanup">
+                <h2>Limpeza</h2>
+                <pre><code>git checkout -- nome-do-arquivo</code></pre>
+                <p><em>[ATENÇÃO]</em> Esse comando restaura a branch para estado do último commit, em outras palavras apaga todas as alterações feitas.</p>
+            </section>
+
+            <section id="extras">
+                <h2>Extras</h2>
+                <p>Comandos adicionais úteis para análise e inspeção de histórico de commits e diferenças entre arquivos.</p>
+
+                <section id="git-log">
+                    <h3>Histórico de commits</h3>
+                    <pre><code>git log</code></pre>
+                    <p>Exibe o histórico completo de commits, com autor, data e mensagens de cada alteração.</p>
+                </section>
+
+                <section id="diff-files">
+                    <h3>Diferença entre arquivos</h3>
+                    <pre><code>git diff</code></pre>
+                    <p>Mostra as diferenças entre as versões modificadas e as versões salvas no último commit.</p>
+                </section>
+            </section>
+
+            <!-- Boas Práticas: Branches -->
+            <section id="good-practices-branches">
+                <h2>Boas Práticas: Branches</h2>
+                <p>Adotar convenções claras para nomes de branches facilita a organização e o entendimento do propósito de cada uma:</p>
+
+                <table class="git-table">
+                    <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Prefixo</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>Funcionalidade</td><td><code>feature/</code></td><td><code>feature/login-screen</code></td></tr>
+                    <tr><td>Correção</td><td><code>fix/</code></td><td><code>fix/empty-password-bug</code></td></tr>
+                    <tr><td>Refatoração</td><td><code>refactor/</code></td><td><code>refactor/password-generator</code></td></tr>
+                    <tr><td>Documentação</td><td><code>docs/</code></td><td><code>docs/update-readme</code></td></tr>
+                    <tr><td>Testes</td><td><code>test/</code></td><td><code>test/unit-user-service</code></td></tr>
+                    <tr><td>Infraestrutura</td><td><code>chore/</code></td><td><code>chore/update-dependencies</code></td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Dica:</strong> use nomes descritivos, em minúsculas e separados por hífens.</p>
+            </section>
+
+            <!-- Boas Práticas: Commits -->
+            <section id="good-practices-commits">
+                <h2>Boas Práticas: Commits</h2>
+                <p>Mensagens de commit devem ser curtas, objetivas e usar o tempo verbal imperativo. Padronize com prefixos claros:</p>
+
+                <table class="git-table">
+                    <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Prefixo</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr><td>Novo recurso</td><td><code>feat:</code></td><td><code>feat: add login functionality</code></td></tr>
+                    <tr><td>Correção</td><td><code>fix:</code></td><td><code>fix: correct input validation on form</code></td></tr>
+                    <tr><td>Refatoração</td><td><code>refactor:</code></td><td><code>refactor: simplify user session handling</code></td></tr>
+                    <tr><td>Documentação</td><td><code>docs:</code></td><td><code>docs: add API usage examples to README</code></td></tr>
+                    <tr><td>Testes</td><td><code>test:</code></td><td><code>test: create unit tests for password module</code></td></tr>
+                    <tr><td>Chore</td><td><code>chore:</code></td><td><code>chore: update dependencies and cleanup</code></td></tr>
+                    </tbody>
+
+                </table>
+                <p><strong>Exemplo completo:</strong></p>
+                <pre><code>git commit -m "feat: implement user authentication via email"</code></pre>
+            </section>
+
+            <!-- Comandos para Merge -->
+            <section id="commands-for-merging">
+                <h2>Comandos para Fazer Merge com a Main</h2>
+                <pre><code>git checkout main
+                    git pull origin main
+                    git checkout nome-da-branch
+                    git merge main</code></pre>
+                <p>Esse processo garante que sua branch esteja atualizada antes do merge, minimizando conflitos.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
