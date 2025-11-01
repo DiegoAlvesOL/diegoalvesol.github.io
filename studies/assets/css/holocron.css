@@ -1,17 +1,19 @@
+/* Diego Alves de Oliveira 78952 */
+
 /* =======================================
    holocron.css
    Custom styles for the "Holocron of Studies" section
    ======================================= */
 
 /* =========================================
-   - Váriáveis de cores globais
+   - Global color variables
    ========================================= */
 :root{
-    --color-bg-dark: #0b0c10;    /* Fundo principal do site */
-    --color-panel: #1f2833;      /* Fundo dos cards e header */
-    --color-border: #45a29e;     /* Cor para bordas e detalhes */
-    --color-highlights: #66fcf1; /* Cor para destaque e (links, títulos) */
-    --color-text: #c5c6c7;       /* Cor para texto e conteúdo (<p> </p>) */
+    --color-bg-dark: #0b0c10;    /* Main background of the site */
+    --color-panel: #1f2833;      /* Background of the cards and header */
+    --color-border: #45a29e;     /* Color for borders and details */
+    --color-highlights: #66fcf1; /* Color for highlight and (links, titles) */
+    --color-text: #c5c6c7;       /* Color for text and content (<p> </p>) */
 }
 
 /*===========GENERAL LAYOUT================*/
@@ -73,9 +75,9 @@ header .back-link:hover{
 
 
 /* ====== WRAPPER (new animated container) ====== */
-/* O wrapper é o elemento ANIMADO (move/opacity).
-   Separando a animação no wrapper, o article pode
-   usar transform no hover sem conflito. */
+/* The wrapper is the ANIMATED element (move/opacity).
+   Separating the animation in the wrapper, the article can
+   use transform on hover without conflict. */
 .holocron-card-wrapper {
     opacity: 0;
     animation-duration: 0.8s;
@@ -217,7 +219,7 @@ footer{
 }
 
 /* ===============================
-   AULA 6 — RESPONSIVIDADE
+   CLASS 6 — RESPONSIVENESS
    =============================== */
 
 *{
@@ -241,7 +243,7 @@ body{
     }
 }
 
-/* Versão mobile (smartphones) */
+/* Mobile version (smartphones) */
 @media(max-width: 600px){
     header{
         padding: 1.5rem 0.5rem;

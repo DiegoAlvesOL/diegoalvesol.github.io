@@ -1,19 +1,21 @@
+/* Diego Alves de Oliveira 78952 */
+
 /*
-    CSS GLOBAL
-    - Este arquivo define o estilo visual de todas as páginas do site
-    - Você pode aplicá-lo a qualquer novo arquivo HTML com a mesma linha:
+    GLOBAL CSS
+    - This file define the visual style of all pages of the site
+    - You can apply it to any new HTML file with the same line:
       <link rel="stylesheet" href="assets/css/global.css">
 */
 
 :root {
-    --color-bg-dark: #0b0c10;    /* Fundo principal do site */
-    --color-panel: #1f2833;      /* Fundo dos cards e header */
-    --color-border: #45a29e;     /* Cor para bordas e detalhes */
-    --color-highlights: #66fcf1; /* Cor para destaque e (links, títulos) */
-    --color-text: #c5c6c7;       /* Cor para texto e conteúdo (<p> </p>) */
+    --color-bg-dark: #0b0c10;    /* Main background of the site */
+    --color-panel: #1f2833;      /* Background of the cards and header */
+    --color-border: #45a29e;     /* Color for borders and details */
+    --color-highlights: #66fcf1; /* Color for highlight and (links, titles) */
+    --color-text: #c5c6c7;       /* Color for text and content (<p> </p>) */
 }
 
-/* ======== CONFIGURAÇÕES BÁSICAS ======== */
+/* ======== BASIC SETTINGS ======== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,13 +25,12 @@ body {
     text-align: center;
 }
 
-/* ======== CABEÇALHO ======== */
+/* ======== HEADER ======== */
 header {
     background-color: var(--color-panel);
     padding: 2rem 0 1rem;
     text-align: center;
     border-bottom: 2px solid var(--color-border);
-
 }
 
 h1 {
@@ -43,7 +44,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-h3{
+h3 {
     color: var(--color-highlights);
 }
 
@@ -54,7 +55,7 @@ h3{
     border-top: 2px solid var(--color-border);
 }
 
-/* ======== SEÇÕES ======== */
+/* ======== SECTIONS ======== */
 section {
     margin: 2rem auto;
     padding: 1rem;
@@ -80,7 +81,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ======== BOTÕES DE NAVEGAÇÃO ======== */
+/* ======== NAVIGATION BUTTONS ======== */
 .nav-buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -104,7 +105,7 @@ a:hover {
     color: var(--color-bg-dark);
 }
 
-/* ======== ELEMENTOS DE TEXTO ======== */
+/* ======== TEXT ELEMENTS ======== */
 p {
     line-height: 1.6;
     max-width: 800px;
@@ -120,7 +121,7 @@ li {
     margin: 0.5rem 0;
 }
 
-/* ======== BOTÃO HOLOCRON ======== */
+/* ======== HOLOCRON BUTTON ======== */
 .holocron-button {
     display: flex;
     justify-content: center;
@@ -154,8 +155,7 @@ li {
     display: block;
 }
 
-
-/* ======== RODAPÉ ======== */
+/* ======== FOOTER ======== */
 footer {
     margin-top: 3rem;
     padding: 1rem;

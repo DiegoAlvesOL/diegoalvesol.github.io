@@ -1,7 +1,9 @@
+/* Diego Alves de Oliveira 78952 */
+
 /* ==========================================
    main.css
-   Autor: Diego Alves
-   Descrição: Estilos principais do Holocron
+   Author: Diego Alves
+   Description: Main styles of the Holocron
    ========================================== */
 
 /* Defines default styles for the entire document */
@@ -14,7 +16,7 @@ body {
 }
 
 /* Defines a style for the header */
-header{
+header {
     background-color: #1a1a1a;
     padding: 20px;
     text-align: center;
@@ -22,14 +24,14 @@ header{
 }
 
 /* Style for the main title */
-h1{
+h1 {
     font-size: 2rem;
     letter-spacing: 1px;
     color: #00e6b8;
 }
 
 /* Style for main sections */
-section{
+section {
     padding: 40px;
     margin: 20px;
     background-color: #1a1a1a;
@@ -37,9 +39,8 @@ section{
     box-shadow: 0 0 10px rgba(0, 230, 184, 0.2);
 }
 
-
 /* Style for articles (specific content within sections) */
-article{
+article {
     margin-bottom: 20px;
     padding: 20px;
     background-color: #222;
