@@ -5,71 +5,157 @@
       <link rel="stylesheet" href="assets/css/global.css">
 */
 
+:root {
+    --color-bg-dark: #0b0c10;    /* Fundo principal do site */
+    --color-panel: #1f2833;      /* Fundo dos cards e header */
+    --color-border: #45a29e;     /* Cor para bordas e detalhes */
+    --color-highlights: #66fcf1; /* Cor para destaque e (links, títulos) */
+    --color-text: #c5c6c7;       /* Cor para texto e conteúdo (<p> </p>) */
+}
+
 /* ======== CONFIGURAÇÕES BÁSICAS ======== */
 body {
-    /* Fonte padrão e espaçamento geral */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
-    /* Fundo escuro (tema Star Wars) e texto claro */
-    background-color: #0b0c10;
-    color: #c5c6c7;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
     text-align: center;
 }
 
 /* ======== CABEÇALHO ======== */
 header {
-    /* Fundo do cabeçalho e espaçamento interno */
-    background-color: #1f2833;
-    padding: 2rem 0;
+    background-color: var(--color-panel);
+    padding: 2rem 0 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-border);
+
 }
 
-/* Título principal (nome) */
 h1 {
-    color: #66fcf1; /* Azul neon */
+    color: var(--color-highlights);
     margin-bottom: 0.5rem;
 }
 
-/* Subtítulo (frase “May the Force be with you”) */
 h2 {
-    color: #45a29e;
+    color: var(--color-border);
     font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+h3{
+    color: var(--color-highlights);
+}
+
+.divider {
+    width: 60%;
+    margin: 0 auto 1rem;
+    border: none;
+    border-top: 2px solid var(--color-border);
+}
+
+/* ======== SEÇÕES ======== */
+section {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 900px;
+    background-color: var(--color-panel);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+}
+
+section header h3 {
+    color: var(--color-highlights);
+    margin-bottom: 1rem;
 }
 
 /* ======== LINKS ======== */
 a {
-    color: #66fcf1;
+    color: var(--color-highlights);
     text-decoration: none;
-    transition: 0.3s; /* Efeito suave ao passar o mouse */
+    transition: 0.3s;
 }
 
-/* Efeito hover (passar o mouse sobre o link) */
 a:hover {
     text-decoration: underline;
 }
 
-/* ======== RODAPÉ ======== */
-footer {
-    margin-top: 3rem;
-    padding: 1rem;
-    background-color: #1f2833;
-    color: #c5c6c7;
-    font-size: 0.9rem;
+/* ======== BOTÕES DE NAVEGAÇÃO ======== */
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+.nav-buttons a {
+    background-color: var(--color-panel);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-buttons a:hover {
+    background-color: var(--color-border);
+    color: var(--color-bg-dark);
 }
 
 /* ======== ELEMENTOS DE TEXTO ======== */
 p {
-    line-height: 1.6; /* Melhora a leitura */
+    line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 1rem;
 }
 
 ul {
-    list-style-type: none; /* Remove bolinhas da lista */
+    list-style-type: none;
     padding: 0;
 }
 
 li {
     margin: 0.5rem 0;
+}
+
+/* ======== BOTÃO HOLOCRON ======== */
+.holocron-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.holocron-button a {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-panel);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.holocron-button a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-border);
+}
+
+.holocron-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* ======== RODAPÉ ======== */
+footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: var(--color-panel);
+    color: var(--color-text);
+    font-size: 0.9rem;
 }
