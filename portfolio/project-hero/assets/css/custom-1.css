@@ -2,4 +2,105 @@
 .section-selector-1 { background-color: var(--gray-200) }
 .col-3 h3 { margin-bottom: 16px }
 
+
 /* Add your custom CSS below */
+
+
+
+.hero-grid{
+    display: grid;
+    box-shadow: 0 0 20px rgba(102, 122, 252, 0.60);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+}
+
+.flex-cols-card-wrapper{
+    background-color: white;
+    border: 1px solid #669dfc;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform, box-shadow;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex-cols-card-wrapper::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: radial-gradient(circle, rgba(102, 122, 252, 0.91) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.flex-cols-card-wrapper:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(102, 122, 252, 0.91);
+    z-index: 2;
+}
+.flex-cols-card-wrapper:hover::before{
+    opacity: 1;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 0.4; }
+}
+
+
+/* O que vai dentro de cada card*/
+
+.flex-cols-card-wrapper img.icon{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.flex-cols-card-wrapper h2{
+    margin: 0.5rem 0;
+    color: #667AFCE8;
+}
+
+.flex-cols-card-wrapper p{
+    margin-bottom: 1rem;
+}
+
+.flex-cols-card-wrapper .btn{
+    display: inline-block;
+    background-color: #071d40;
+    color: #cfcfcf;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.flex-cols-card-wrapper .btn:hover{
+    background-color: #667AFCE8;
+    color:#071d40;
+}
+
+footer {
+    background-color: white;
+    color: #071d40;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 2px solid #667AFCE8;
+}
