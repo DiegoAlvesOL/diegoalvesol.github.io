@@ -10,5 +10,32 @@ section.theme-dark   { background-color: #0f172a }
 footer.theme-dark   { background-color: #0f172a }
 
 
-
 header .col-text h2, .col-1 > h3 { line-height: 1.8 }
+
+/* Hero Header Styles */
+.hero-header {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('../img/elements.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh; /* Ensure substantial height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-header .col-text {
+    max-width: 800px; /* Limit text width for readability */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem; /* Make the title larger */
+    margin-bottom: 20px;
+}
+
+.hero-header h2 {
+    color: #e2e8f0; /* Light gray for better readability against dark overlay */
+    font-weight: 300;
+}
