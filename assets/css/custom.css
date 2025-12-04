@@ -1,14 +1,19 @@
 
-nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f172a }
+nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #000000 }
 
-header.theme-dark   { background-color: #0f172a }
+header.theme-dark   { background-color: #000000 }
 
-header.theme-dark  h1 { color: var(--sky-400); }
+header.theme-dark  h1 { color: #ecc94b; }
 
-section.theme-dark   { background-color: #0f172a }
+section.theme-dark   { background-color: #0a0f1c }
 
-footer.theme-dark   { background-color: #0f172a }
+footer.theme-dark   { background-color: #0a0f1c
+}
 
+nav .brand img {
+    height: 100px;
+    width: auto;
+}
 
 header .col-text h2, .col-1 > h3 { line-height: 1.8 }
 
@@ -39,3 +44,5 @@ header .col-text h2, .col-1 > h3 { line-height: 1.8 }
     color: #e2e8f0; /* Light gray for better readability against dark overlay */
     font-weight: 300;
 }
+
+
