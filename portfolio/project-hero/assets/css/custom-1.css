@@ -104,3 +104,7 @@ footer {
     margin-top: 3rem;
     border-top: 2px solid #667AFCE8;
 }
+header h1, header h2 {
+    font-family: 'Abril Fatface', serif;
+    letter-spacing: 1px;
+}
