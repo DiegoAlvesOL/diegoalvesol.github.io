@@ -1,165 +1,518 @@
-/* Diego Alves de Oliveira 78952 */
+/* Diego Alves - Software Engineer Portfolio */
 
 /*
     GLOBAL CSS
-    - This file define the visual style of all pages of the site
-    - You can apply it to any new HTML file with the same line:
-      <link rel="stylesheet" href="assets/css/global.css">
+    - Defines the visual style of all pages of the site
+    - Implements the "Essential Elements" / Atom theme
 */
 
 :root {
-    --color-bg-dark: #0b0c10;    /* Main background of the site */
-    --color-panel: #1f2833;      /* Background of the cards and header */
-    --color-border: #45a29e;     /* Color for borders and details */
-    --color-highlights: #66fcf1; /* Color for highlight and (links, titles) */
-    --color-text: #c5c6c7;       /* Color for text and content (<p> </p>) */
+    /* Palette: Dark, Modern, "Atom" Vibes */
+    --color-bg-dark: #0b0c10;
+    /* Deep space black/blue */
+    --color-panel: #1f2833;
+    /* Dark gray for panels/cards */
+    --color-border: #45a29e;
+    /* Muted Cyan */
+    --color-highlights: #66fcf1;
+    /* Bright Neon Cyan - The "Energy" color */
+    --color-text: #c5c6c7;
+    /* Soft gray for readability */
+    --color-text-light: #ffffff;
+    /* Pure white for emphasis */
+
+    --font-heading: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --transition-speed: 0.3s;
 }
 
 /* ======== BASIC SETTINGS ======== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     padding: 0;
     background-color: var(--color-bg-dark);
     color: var(--color-text);
     text-align: center;
+    line-height: 1.6;
 }
 
-/* ======== HEADER ======== */
-header {
-    background-color: var(--color-panel);
-    padding: 2rem 0 1rem;
-    text-align: center;
-    border-bottom: 2px solid var(--color-border);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
 }
 
 h1 {
     color: var(--color-highlights);
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    letter-spacing: 1px;
 }
 
 h2 {
     color: var(--color-border);
-    font-weight: normal;
-    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 h3 {
     color: var(--color-highlights);
 }
 
-.divider {
-    width: 60%;
-    margin: 0 auto 1rem;
-    border: none;
-    border-top: 2px solid var(--color-border);
+/* ======== ANIMATIONS ======== */
+
+/* Slide In from Bottom */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* ======== SECTIONS ======== */
-section {
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 900px;
-    background-color: var(--color-panel);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+.animate-slide-up {
+    animation: slideInUp 1s ease-out forwards;
 }
 
-section header h3 {
-    color: var(--color-highlights);
-    margin-bottom: 1rem;
+/* Delay classes for staggered animations */
+.delay-100 {
+    animation-delay: 0.1s;
 }
 
-/* ======== LINKS ======== */
-a {
-    color: var(--color-highlights);
-    text-decoration: none;
-    transition: 0.3s;
+.delay-200 {
+    animation-delay: 0.2s;
 }
 
-a:hover {
-    text-decoration: underline;
+.delay-300 {
+    animation-delay: 0.3s;
 }
 
-/* ======== NAVIGATION BUTTONS ======== */
-.nav-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-    padding: 1rem 0;
+.delay-500 {
+    animation-delay: 0.5s;
 }
 
-.nav-buttons a {
-    background-color: var(--color-panel);
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    padding: 0.6rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+
+/* ======== HEADER / HERO ======== */
+header {
+    background-color: transparent;
+    /* Seamless blend */
+    padding: 6rem 0 4rem;
+    /* More breathing room */
+    text-align: center;
 }
 
-.nav-buttons a:hover {
-    background-color: var(--color-border);
+/* Highlight text selection */
+::selection {
+    background: var(--color-highlights);
     color: var(--color-bg-dark);
 }
 
-/* ======== TEXT ELEMENTS ======== */
-p {
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 1rem;
+/* ======== NAVIGATION ======== */
+nav {
+    background-color: rgba(11, 12, 16, 0.95);
+    /* Slight transparency */
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
 }
 
-ul {
-    list-style-type: none;
+.container-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav .brand img {
+    height: 40px;
+}
+
+nav .links-wrapper {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
     padding: 0;
 }
 
-li {
-    margin: 0.5rem 0;
+nav .links-wrapper li a {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
 }
 
-/* ======== HOLOCRON BUTTON ======== */
-.holocron-button {
+/* Updated Hover Effect: Background highlight */
+nav .links-wrapper li a:hover,
+nav .links-wrapper li a.active {
+    background-color: rgba(69, 162, 158, 0.2);
+    /* Low opacity cyan */
+    color: var(--color-highlights);
+    text-shadow: 0 0 5px rgba(102, 252, 241, 0.5);
+}
+
+/* ======== BUTTONS ======== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    /* Pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-speed) ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Solid Button (Primary) */
+.btn-solid {
+    background-color: var(--color-highlights);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.btn-solid:hover {
+    background-color: var(--color-text-light);
+    border-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Outline Button (Secondary) */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-highlights);
+    color: var(--color-highlights);
+}
+
+.btn-outline:hover {
+    background-color: rgba(102, 252, 241, 0.1);
+    color: var(--color-text-light);
+    /* White on hover */
+    border-color: var(--color-text-light);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Soft button variant override from existing classes if needed */
+.btn-soft {
+    /* Keeping consistency with new design system */
+}
+
+
+/* ======== SECTIONS ======== */
+section {
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-highlights);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+/* ======== CARDS (PROJECTS) ======== */
+/* Flex Grid for Projects to replace "col-3" dependence or enhance it */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Independent card class */
+.project-card {
+    background-color: var(--color-panel);
+    border: 1px solid rgba(69, 162, 158, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    flex: 1 1 300px;
+    /* Responsive basis */
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-highlights);
+}
+
+.project-card figure {
+    margin: 0;
+    overflow: hidden;
+    height: 220px;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: var(--color-text-light);
+}
+
+.project-card p {
+    font-size: 1rem;
+    flex-grow: 1;
+    color: #aeb4b7;
+    margin-bottom: 1.5rem;
+}
+
+.project-card .btn {
+    align-self: flex-start;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    width: auto;
+}
+
+
+/* ======== ATOM ANIMATION COMPONENT ======== */
+/* Replaces the GIF */
+.atom-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem auto;
+    perspective: 1000px;
+    /* For 3D rotation effect */
 }
 
-.holocron-button a {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    background-color: var(--color-panel);
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    padding: 0.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Core */
+.atom-core {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, #fff, var(--color-highlights));
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--color-highlights);
+    z-index: 10;
+    animation: pulse 2s infinite ease-in-out;
 }
 
-.holocron-button a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--color-border);
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px var(--color-highlights);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 50px var(--color-highlights);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px var(--color-highlights);
+    }
 }
 
-.holocron-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+/* Orbits */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    height: 260px;
+    margin-top: -130px;
+    margin-left: -130px;
+    border: 2px solid rgba(102, 252, 241, 0.4);
+    border-radius: 50%;
+    transform-style: preserve-3d;
 }
+
+.orbit-1 {
+    animation: spin 4s linear infinite;
+}
+
+.orbit-2 {
+    animation: spin 5s linear infinite;
+    transform: rotateX(60deg) rotateY(20deg);
+}
+
+.orbit-3 {
+    animation: spin 6s linear infinite;
+    transform: rotateX(60deg) rotateY(-20deg);
+}
+
+/* To make them look like distinct 3D orbits */
+.orbit-wrapper-1 {
+    transform: rotateY(0deg) rotateX(70deg);
+}
+
+.orbit-wrapper-2 {
+    transform: rotateY(60deg) rotateX(70deg);
+}
+
+.orbit-wrapper-3 {
+    transform: rotateY(-60deg) rotateX(70deg);
+}
+
+.atom-electron {
+    position: absolute;
+    top: -6px;
+    /* Half of height to center on line */
+    left: 50%;
+    margin-left: -6px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 
 /* ======== FOOTER ======== */
 footer {
-    margin-top: 3rem;
-    padding: 1rem;
-    background-color: var(--color-panel);
+    margin-top: 6rem;
+    padding: 4rem 1rem 2rem;
+    background-color: #050608;
+    /* Darker than body */
     color: var(--color-text);
+    border-top: 1px solid #1f2833;
+}
+
+footer h2 {
+    color: var(--color-highlights);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+footer h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--color-text);
+    text-transform: uppercase;
     font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--color-highlights);
+    text-decoration: underline;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.footer-icons li a {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    transition: color 0.3s;
+}
+
+.footer-icons li a:hover {
+    color: var(--color-highlights);
+    transform: scale(1.1);
+}
+
+.privacy {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.privacy a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ======== UTILITIES ======== */
+.theme-dark {
+    /* Legacy compliance or specific overrides */
 }
