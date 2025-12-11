@@ -17,3 +17,12 @@ nav .brand img {
     /* Slightly larger than global default if needed */
     width: auto;
 }
+
+/* PORTFOLIO PAGE ALIGNMENT FIX */
+/* Force center alignment for the header text container on all screens */
+header.text-center-mobile .container-text {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100%;
+}

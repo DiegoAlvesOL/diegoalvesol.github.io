@@ -326,110 +326,21 @@ section h2::after {
 }
 
 
-/* ======== ATOM ANIMATION COMPONENT ======== */
-/* Replaces the GIF */
-.atom-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-    /* For 3D rotation effect */
+/* ======== H1 HOVER EFFECTS ======== */
+h1 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all var(--transition-speed) ease;
+    cursor: default;
+    /* Indicates interactivity without being a link pointer necessarily, or keep default */
 }
 
-/* Core */
-.atom-core {
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle at 30% 30%, #fff, var(--color-highlights));
-    border-radius: 50%;
-    box-shadow: 0 0 30px var(--color-highlights);
-    z-index: 10;
-    animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 30px var(--color-highlights);
-    }
-
-    50% {
-        transform: scale(1.1);
-        box-shadow: 0 0 50px var(--color-highlights);
-    }
-
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 30px var(--color-highlights);
-    }
-}
-
-/* Orbits */
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 260px;
-    height: 260px;
-    margin-top: -130px;
-    margin-left: -130px;
-    border: 2px solid rgba(102, 252, 241, 0.4);
-    border-radius: 50%;
-    transform-style: preserve-3d;
-}
-
-.orbit-1 {
-    animation: spin 4s linear infinite;
-}
-
-.orbit-2 {
-    animation: spin 5s linear infinite;
-    transform: rotateX(60deg) rotateY(20deg);
-}
-
-.orbit-3 {
-    animation: spin 6s linear infinite;
-    transform: rotateX(60deg) rotateY(-20deg);
-}
-
-/* To make them look like distinct 3D orbits */
-.orbit-wrapper-1 {
-    transform: rotateY(0deg) rotateX(70deg);
-}
-
-.orbit-wrapper-2 {
-    transform: rotateY(60deg) rotateX(70deg);
-}
-
-.orbit-wrapper-3 {
-    transform: rotateY(-60deg) rotateX(70deg);
-}
-
-.atom-electron {
-    position: absolute;
-    top: -6px;
-    /* Half of height to center on line */
-    left: 50%;
-    margin-left: -6px;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #fff;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-    }
+h1:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
 }
 
 
